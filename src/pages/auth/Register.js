@@ -40,7 +40,6 @@ const Register = () => {
               Register/Email
             </button>
           </form>
-          <ToastContainer />
         </div>
       </div>
     </div>
