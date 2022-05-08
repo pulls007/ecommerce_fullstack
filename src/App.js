@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import Home from './Home';
-import Login from './auth/Login';
-import Register from './auth/Register';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import Home from "./pages/Home";
+import Header from "./components/nav/Header";
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-      {/* <header className='App-header'>
-        <p>recat app</p>
-      </header> */}
+    <>
+      <Header />
       <Switch>
-        <Route exact path='/' component={Home}></Route>
-        <Route exact path='/login' component={Login}></Route>
-        <Route exact path='/register' component={Register}></Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
       </Switch>
-    </div>
+    </>
   );
-}
+};
 
 export default App;
